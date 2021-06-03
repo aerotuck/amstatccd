@@ -1,0 +1,56 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "ASA CCD Portfolio Site"
+theme = "ramium"
+enableEmoji = true	
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
+
+
+[params]
+    author = "ASA Committee on Career Development"
+    gitRepo = "https://github.com/aerotuck/amstatccd"
+    gitBranch = "main"
+    enableTOC = true
+    enableBlogPost = true
+    highlightjsVersion = "9.12.0"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
+    
+    tagsInHome = 40     # set zero to not show in home page
+    sectionsInHome = 5  # set zero to not show in home page
+    paginatePostsPerPage = 5
+    paginateTagsPerPage = 6
+
+
+    [params.logo]
+    url="logo.png"
+    width=50
+    height=50
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "About"
+    url = "/aboutus/aboutus.html"
+    weight = 2
+[[menu.main]]
+   name = "GitHub"
+    url = "https://github.com/aerotuck/amstatccd"
+    weight = 3
+[[menu.main]]
+    name = "Members"
+    url = "/members/members.html"
+    weight = 4
+[[menu.main]]
+    name = "Homepage"
+    url = "https://community.amstat.org/ccd/home"
+    weight = 5
+
+
+
+
