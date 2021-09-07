@@ -1,0 +1,50 @@
+---
+title: Installing Hugo with Blogdown
+author: Matthew Krachey
+date: '2021-09-07'
+slug: []
+categories:
+  - R
+tags:
+  - hugo
+  - blogdown
+image: /image/blog-pic.jpg
+showDate: true
+---
+
+```{r, echo=FALSE, message=FALSE, error=FALSE}
+knitr::opts_knit$set(root.dir = "/home/matthewk/Documents/amstatccd/")
+```
+
+# Introduction
+
+In this post, we will install blogdown in R, install Hugo, and install a Hugo theme.  Note that you need to have R installed to follow along.  Any editor will do.
+
+
+# Installation
+
+In order to install and use blogdown, just enter the following code in the R terminal, or from within a script.
+
+```{r}
+install.packages("blogdown", repos = "https://cloud.r-project.org/")
+library(blogdown)
+```
+Next, to install Hugo, simply enter the following: 
+
+
+```{r}
+blogdown::install_hugo(force=TRUE)
+```
+
+
+## Installing themes
+
+Hugo has a huge number of [pre-configured themes.](https://themes.gohugo.io/) We note, you should select a Hugo theme that supports blogging, as there are a variety of themes that serve various functions.  There are many, many themes that are not included in that set of themes linked above.  This site uses [hugo-lithium](https://github.com/yihui/hugo-lithium). To install hugo-lithium, enter the following:
+
+```{r}
+
+blogdown::install_theme(theme = 'yihui/hugo-lithium', force=TRUE)
+```
+
+
+That's it!  You've now installed Blogdown, Hugo and a theme on your computer.  In the next post I will describe how to connect your site to Netlify.

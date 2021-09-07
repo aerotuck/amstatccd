@@ -1,0 +1,40 @@
+---
+title: Installing Hugo with Blogdown
+author: Matthew Krachey
+date: '2021-09-07'
+slug: []
+categories:
+  - R
+tags:
+  - hugo
+  - blogdown
+image: /image/blog-pic.jpg
+showDate: true
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>In this post, we will install blogdown in R, install Hugo, and install a Hugo theme. Note that you need to have R installed to follow along. Any editor will do.</p>
+</div>
+<div id="installation" class="section level1">
+<h1>Installation</h1>
+<p>In order to install and use blogdown, just enter the following code in the R terminal, or from within a script.</p>
+<pre class="r"><code>install.packages(&quot;blogdown&quot;, repos = &quot;https://cloud.r-project.org/&quot;)
+library(blogdown)</code></pre>
+<p>Next, to install Hugo, simply enter the following:</p>
+<pre class="r"><code>blogdown::install_hugo(force=TRUE)</code></pre>
+<pre><code>## The latest Hugo version is v0.88.1</code></pre>
+<pre><code>## Hugo has been installed to &quot;/root/.local/share/Hugo/0.88.1&quot;. You are recommended to set options(blogdown.hugo.version = &quot;0.88.1&quot;) in the .Rprofile file in your website project. See the blogdown book for more info on .Rprofile: https://bookdown.org/yihui/blogdown/global-options.html</code></pre>
+<div id="installing-themes" class="section level2">
+<h2>Installing themes</h2>
+<p>Hugo has a huge number of <a href="https://themes.gohugo.io/">pre-configured themes.</a> We note, you should select a Hugo theme that supports blogging, as there are a variety of themes that serve various functions. There are many, many themes that are not included in that set of themes linked above. This site uses <a href="https://github.com/yihui/hugo-lithium">hugo-lithium</a>. To install hugo-lithium, enter the following:</p>
+<pre class="r"><code>blogdown::install_theme(theme = &#39;yihui/hugo-lithium&#39;, force=TRUE)</code></pre>
+<pre><code>## Warning: The theme has provided an example site. You should read the theme&#39;s
+## documentation and at least take a look at the config file config.toml (or .yaml)
+## of the example site, because not all Hugo themes work with any config files.</code></pre>
+<p>That’s it! You’ve now installed Blogdown, Hugo and a theme on your computer. In the next post I will describe how to connect your site to Netlify.</p>
+</div>
+</div>
