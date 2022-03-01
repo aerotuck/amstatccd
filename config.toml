@@ -50,7 +50,4 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
     name = "Homepage"
     url = "https://community.amstat.org/ccd/home"
     weight = 5
-
-
-
-
+    
